@@ -8,7 +8,6 @@
             <field name="email_from">{{ (object.create_uid.email_formatted or user.email_formatted) }}</field>
             <field name="partner_to">{{ object.etudiant_id.name }}</field>
             <field name="email_to">{{ object.etudiant_id.email }}</field>
-            <field name="lang">{{ object.etudiant_id.lang or 'fr_FR' }}</field>
             <field name="body_html" type="html">
 <div style="margin: 0px; padding: 0px;">
     <p style="margin: 0px; padding: 0px; font-size: 13px;">
