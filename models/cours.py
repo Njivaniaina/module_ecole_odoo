@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+from odoo.exceptions import UserError
 
 class Cours(models.Model):
     _name = 'ecole.cours'
@@ -56,6 +57,9 @@ class Cours(models.Model):
         return super().create(vals_list)
 
     def action_ouvrir(self):
+        for rec in self:
+            if not rec.enseignant_id:
+                raise UserError(_("Impossible d'ouvrir le cours sans enseignant assigné !"))
         self.etat = 'ouvert'
 
     def action_cloturer(self):
