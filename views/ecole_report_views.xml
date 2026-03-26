@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Action de rapport -->
+    <record id="action_report_bulletin" model="ir.actions.report">
+        <field name="name">Bulletin de Notes</field>
+        <field name="model">ecole.etudiant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ecole.report_bulletin_template</field>
+        <field name="report_file">ecole.report_bulletin_template</field>
+        <field name="print_report_name">'Bulletin_%s' % (object.name.replace(' ', '_'))</field>
+        <field name="binding_model_id" ref="model_ecole_etudiant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Template QWeb du bulletin -->
+    <template id="report_bulletin_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="text-center">
+                            <h2>BULLETIN DE NOTES</h2>
+                            <hr/>
+                        </div>
+
+                        <div class="row mt32 mb32">
+                            <div class="col-6">
+                                <strong>Nom de l'étudiant :</strong> <span t-field="o.name"/><br/>
+                                <strong>Matricule :</strong> <span t-field="o.matricule"/><br/>
+                                <strong>Date de naissance :</strong> <span t-field="o.date_naissance"/><br/>
+                            </div>
+                            <div class="col-6 text-right">
+                                <strong>Email :</strong> <span t-field="o.email"/><br/>
+                                <strong>Téléphone :</strong> <span t-field="o.telephone"/><br/>
+                                <strong>Année scolaire :</strong> 2023-2024
+                            </div>
+                        </div>
+
+                        <table class="table table-sm o_main_table mt16">
+                            <thead>
+                                <tr>
+                                    <th>Cours</th>
+                                    <th>Enseignant</th>
+                                    <th class="text-center">Note / 20</th>
+                                    <th>Appréciation</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.note_ids" t-as="line">
+                                    <tr>
+                                        <td><span t-field="line.cours_id.name"/></td>
+                                        <td><span t-field="line.cours_id.enseignant_id.name"/></td>
+                                        <td class="text-center">
+                                            <span t-field="line.note" t-options='{"widget": "float", "precision": 2}'/>
+                                        </td>
+                                        <td><span t-field="line.appreciation"/></td>
+                                        <td><span t-field="line.commentaire"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <div class="row mt32" style="border-top: 2px solid black; padding-top: 10px;">
+                            <div class="col-8"></div>
+                            <div class="col-4 text-right">
+                                <h4>MOYENNE GÉNÉRALE : <span t-field="o.moyenne" t-options='{"widget": "float", "precision": 2}'/></h4>
+                                <p>Nombre de cours suivis : <span t-field="o.nb_cours"/></p>
+                            </div>
+                        </div>
+
+                        <div class="mt64 row">
+                            <div class="col-6">
+                                <p>Signature de l'enseignant responsable</p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p>Signature du Directeur</p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

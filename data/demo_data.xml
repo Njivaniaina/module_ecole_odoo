@@ -1,68 +1,1561 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <!-- Étudiants -->
-        <record id="demo_etudiant_1" model="ecole.etudiant">
-            <field name="name">Alice Martin</field>
-            <field name="email">alice.martin@example.com</field>
-            <field name="genre">feminin</field>
-            <field name="date_naissance">2002-05-15</field>
-        </record>
-
-        <record id="demo_etudiant_2" model="ecole.etudiant">
-            <field name="name">Jean Dupont</field>
-            <field name="email">j.dupont@example.com</field>
-            <field name="genre">masculin</field>
-            <field name="date_naissance">2001-10-20</field>
-        </record>
-
-        <!-- Enseignants -->
         <record id="demo_enseignant_1" model="ecole.enseignant">
             <field name="name">Prof. Marie Curie</field>
-            <field name="email">marie.curie@ecole.com</field>
             <field name="specialite">sciences</field>
+            <field name="email">prof.marie.curie@ecole.com</field>
         </record>
 
         <record id="demo_enseignant_2" model="ecole.enseignant">
             <field name="name">M. Alan Turing</field>
-            <field name="email">alan.turing@ecole.com</field>
             <field name="specialite">informatique</field>
+            <field name="email">m.alan.turing@ecole.com</field>
         </record>
 
-        <!-- Cours -->
-        <record id="demo_cours_math" model="ecole.cours">
+        <record id="demo_enseignant_3" model="ecole.enseignant">
+            <field name="name">Mme Ada Lovelace</field>
+            <field name="specialite">informatique</field>
+            <field name="email">mmeada.lovelace@ecole.com</field>
+        </record>
+
+        <record id="demo_enseignant_4" model="ecole.enseignant">
+            <field name="name">M. Victor Hugo</field>
+            <field name="specialite">lettres</field>
+            <field name="email">m.victor.hugo@ecole.com</field>
+        </record>
+
+        <record id="demo_enseignant_5" model="ecole.enseignant">
+            <field name="name">M. Isaac Newton</field>
+            <field name="specialite">sciences</field>
+            <field name="email">m.isaac.newton@ecole.com</field>
+        </record>
+
+        <record id="demo_enseignant_6" model="ecole.enseignant">
+            <field name="name">Mme Simone de Beauvoir</field>
+            <field name="specialite">lettres</field>
+            <field name="email">mmesimone.de.beauvoir@ecole.com</field>
+        </record>
+
+        <record id="demo_etudiant_1" model="ecole.etudiant">
+            <field name="name">Alice Martin</field>
+            <field name="email">alice.martin@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-06-21</field>
+        </record>
+
+        <record id="demo_etudiant_2" model="ecole.etudiant">
+            <field name="name">Jean Dupont</field>
+            <field name="email">jean.dupont@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-10-23</field>
+        </record>
+
+        <record id="demo_etudiant_3" model="ecole.etudiant">
+            <field name="name">Marie Lefebvre</field>
+            <field name="email">marie.lefebvre@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-08-19</field>
+        </record>
+
+        <record id="demo_etudiant_4" model="ecole.etudiant">
+            <field name="name">Pierre Durand</field>
+            <field name="email">pierre.durand@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-10-01</field>
+        </record>
+
+        <record id="demo_etudiant_5" model="ecole.etudiant">
+            <field name="name">Sophie Bernard</field>
+            <field name="email">sophie.bernard@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-04-05</field>
+        </record>
+
+        <record id="demo_etudiant_6" model="ecole.etudiant">
+            <field name="name">Thomas Petit</field>
+            <field name="email">thomas.petit@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-02-03</field>
+        </record>
+
+        <record id="demo_etudiant_7" model="ecole.etudiant">
+            <field name="name">Julie Robert</field>
+            <field name="email">julie.robert@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-02-05</field>
+        </record>
+
+        <record id="demo_etudiant_8" model="ecole.etudiant">
+            <field name="name">Nicolas Richard</field>
+            <field name="email">nicolas.richard@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-12-25</field>
+        </record>
+
+        <record id="demo_etudiant_9" model="ecole.etudiant">
+            <field name="name">Emma Schmidt</field>
+            <field name="email">emma.schmidt@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-10-21</field>
+        </record>
+
+        <record id="demo_etudiant_10" model="ecole.etudiant">
+            <field name="name">Lucas Muller</field>
+            <field name="email">lucas.muller@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-11-22</field>
+        </record>
+
+        <record id="demo_etudiant_11" model="ecole.etudiant">
+            <field name="name">Chloe Dubois</field>
+            <field name="email">chloe.dubois@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-07-12</field>
+        </record>
+
+        <record id="demo_etudiant_12" model="ecole.etudiant">
+            <field name="name">Hugo Moreau</field>
+            <field name="email">hugo.moreau@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-06-17</field>
+        </record>
+
+        <record id="demo_etudiant_13" model="ecole.etudiant">
+            <field name="name">Lea Laurent</field>
+            <field name="email">lea.laurent@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-12-18</field>
+        </record>
+
+        <record id="demo_etudiant_14" model="ecole.etudiant">
+            <field name="name">Nathan Simon</field>
+            <field name="email">nathan.simon@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-09-15</field>
+        </record>
+
+        <record id="demo_etudiant_15" model="ecole.etudiant">
+            <field name="name">Mathilde Michel</field>
+            <field name="email">mathilde.michel@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-06-02</field>
+        </record>
+
+        <record id="demo_etudiant_16" model="ecole.etudiant">
+            <field name="name">Arthur Garcia</field>
+            <field name="email">arthur.garcia@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-05-23</field>
+        </record>
+
+        <record id="demo_etudiant_17" model="ecole.etudiant">
+            <field name="name">Manon David</field>
+            <field name="email">manon.david@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-06-06</field>
+        </record>
+
+        <record id="demo_etudiant_18" model="ecole.etudiant">
+            <field name="name">Enzo Bertrand</field>
+            <field name="email">enzo.bertrand@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-06-14</field>
+        </record>
+
+        <record id="demo_etudiant_19" model="ecole.etudiant">
+            <field name="name">Ines Roux</field>
+            <field name="email">ines.roux@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-12-21</field>
+        </record>
+
+        <record id="demo_etudiant_20" model="ecole.etudiant">
+            <field name="name">Gabriel Vincent</field>
+            <field name="email">gabriel.vincent@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-10-23</field>
+        </record>
+
+        <record id="demo_etudiant_21" model="ecole.etudiant">
+            <field name="name">Eva Fournier</field>
+            <field name="email">eva.fournier@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-09-19</field>
+        </record>
+
+        <record id="demo_etudiant_22" model="ecole.etudiant">
+            <field name="name">Louis Morel</field>
+            <field name="email">louis.morel@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-02-21</field>
+        </record>
+
+        <record id="demo_etudiant_23" model="ecole.etudiant">
+            <field name="name">Sarah Girard</field>
+            <field name="email">sarah.girard@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-07-09</field>
+        </record>
+
+        <record id="demo_etudiant_24" model="ecole.etudiant">
+            <field name="name">Paul Andre</field>
+            <field name="email">paul.andre@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-06-04</field>
+        </record>
+
+        <record id="demo_etudiant_25" model="ecole.etudiant">
+            <field name="name">Zoe Benoit</field>
+            <field name="email">zoe.benoit@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-11-25</field>
+        </record>
+
+        <record id="demo_etudiant_26" model="ecole.etudiant">
+            <field name="name">Adam Marchand</field>
+            <field name="email">adam.marchand@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-03-10</field>
+        </record>
+
+        <record id="demo_etudiant_27" model="ecole.etudiant">
+            <field name="name">Camille Barbier</field>
+            <field name="email">camille.barbier@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-08-25</field>
+        </record>
+
+        <record id="demo_etudiant_28" model="ecole.etudiant">
+            <field name="name">Victor Hubert</field>
+            <field name="email">victor.hubert@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-07-06</field>
+        </record>
+
+        <record id="demo_etudiant_29" model="ecole.etudiant">
+            <field name="name">Jade Brun</field>
+            <field name="email">jade.brun@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-12-04</field>
+        </record>
+
+        <record id="demo_etudiant_30" model="ecole.etudiant">
+            <field name="name">Leo Masson</field>
+            <field name="email">leo.masson@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-05-18</field>
+        </record>
+
+        <record id="demo_etudiant_31" model="ecole.etudiant">
+            <field name="name">Mila Fontaine</field>
+            <field name="email">mila.fontaine@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-01-10</field>
+        </record>
+
+        <record id="demo_etudiant_32" model="ecole.etudiant">
+            <field name="name">Noah Dupuis</field>
+            <field name="email">noah.dupuis@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-11-19</field>
+        </record>
+
+        <record id="demo_etudiant_33" model="ecole.etudiant">
+            <field name="name">Clara Guerrier</field>
+            <field name="email">clara.guerrier@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-01-10</field>
+        </record>
+
+        <record id="demo_etudiant_34" model="ecole.etudiant">
+            <field name="name">Theo Boyer</field>
+            <field name="email">theo.boyer@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-08-16</field>
+        </record>
+
+        <record id="demo_etudiant_35" model="ecole.etudiant">
+            <field name="name">Lina Sauveur</field>
+            <field name="email">lina.sauveur@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2002-12-12</field>
+        </record>
+
+        <record id="demo_cours_1" model="ecole.cours">
             <field name="name">Mathématiques Avancées</field>
             <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
             <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
-            <field name="capacite">25</field>
+            <field name="capacite">40</field>
             <field name="etat">ouvert</field>
             <field name="enseignant_id" ref="demo_enseignant_1"/>
-            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2'))]"/>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2')), (4, ref('demo_etudiant_3')), (4, ref('demo_etudiant_4')), (4, ref('demo_etudiant_5')), (4, ref('demo_etudiant_6')), (4, ref('demo_etudiant_7')), (4, ref('demo_etudiant_8')), (4, ref('demo_etudiant_9')), (4, ref('demo_etudiant_10')), (4, ref('demo_etudiant_11')), (4, ref('demo_etudiant_12')), (4, ref('demo_etudiant_13')), (4, ref('demo_etudiant_14')), (4, ref('demo_etudiant_15')), (4, ref('demo_etudiant_16')), (4, ref('demo_etudiant_17')), (4, ref('demo_etudiant_18')), (4, ref('demo_etudiant_19')), (4, ref('demo_etudiant_20')), (4, ref('demo_etudiant_21')), (4, ref('demo_etudiant_22')), (4, ref('demo_etudiant_23')), (4, ref('demo_etudiant_24')), (4, ref('demo_etudiant_25')), (4, ref('demo_etudiant_26')), (4, ref('demo_etudiant_27')), (4, ref('demo_etudiant_28')), (4, ref('demo_etudiant_29')), (4, ref('demo_etudiant_30')), (4, ref('demo_etudiant_31')), (4, ref('demo_etudiant_32')), (4, ref('demo_etudiant_33')), (4, ref('demo_etudiant_34')), (4, ref('demo_etudiant_35'))]"/>
         </record>
 
-        <record id="demo_cours_info" model="ecole.cours">
+        <record id="demo_cours_2" model="ecole.cours">
             <field name="name">Introduction à Python</field>
             <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
             <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
-            <field name="capacite">20</field>
+            <field name="capacite">40</field>
             <field name="etat">ouvert</field>
             <field name="enseignant_id" ref="demo_enseignant_2"/>
-            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1'))]"/>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2')), (4, ref('demo_etudiant_3')), (4, ref('demo_etudiant_4')), (4, ref('demo_etudiant_5')), (4, ref('demo_etudiant_6')), (4, ref('demo_etudiant_7')), (4, ref('demo_etudiant_8')), (4, ref('demo_etudiant_9')), (4, ref('demo_etudiant_10')), (4, ref('demo_etudiant_11')), (4, ref('demo_etudiant_12')), (4, ref('demo_etudiant_13')), (4, ref('demo_etudiant_14')), (4, ref('demo_etudiant_15')), (4, ref('demo_etudiant_16')), (4, ref('demo_etudiant_17')), (4, ref('demo_etudiant_18')), (4, ref('demo_etudiant_19')), (4, ref('demo_etudiant_20')), (4, ref('demo_etudiant_21')), (4, ref('demo_etudiant_22')), (4, ref('demo_etudiant_23')), (4, ref('demo_etudiant_24')), (4, ref('demo_etudiant_25')), (4, ref('demo_etudiant_26')), (4, ref('demo_etudiant_27')), (4, ref('demo_etudiant_28')), (4, ref('demo_etudiant_29')), (4, ref('demo_etudiant_30')), (4, ref('demo_etudiant_31')), (4, ref('demo_etudiant_32')), (4, ref('demo_etudiant_33')), (4, ref('demo_etudiant_34')), (4, ref('demo_etudiant_35'))]"/>
         </record>
 
-        <!-- Notes -->
-        <record id="demo_note_1" model="ecole.note">
+        <record id="demo_cours_3" model="ecole.cours">
+            <field name="name">Algorithmique et Data</field>
+            <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
+            <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
+            <field name="capacite">40</field>
+            <field name="etat">ouvert</field>
+            <field name="enseignant_id" ref="demo_enseignant_3"/>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2')), (4, ref('demo_etudiant_3')), (4, ref('demo_etudiant_4')), (4, ref('demo_etudiant_5')), (4, ref('demo_etudiant_6')), (4, ref('demo_etudiant_7')), (4, ref('demo_etudiant_8')), (4, ref('demo_etudiant_9')), (4, ref('demo_etudiant_10')), (4, ref('demo_etudiant_11')), (4, ref('demo_etudiant_12')), (4, ref('demo_etudiant_13')), (4, ref('demo_etudiant_14')), (4, ref('demo_etudiant_15')), (4, ref('demo_etudiant_16')), (4, ref('demo_etudiant_17')), (4, ref('demo_etudiant_18')), (4, ref('demo_etudiant_19')), (4, ref('demo_etudiant_20')), (4, ref('demo_etudiant_21')), (4, ref('demo_etudiant_22')), (4, ref('demo_etudiant_23')), (4, ref('demo_etudiant_24')), (4, ref('demo_etudiant_25')), (4, ref('demo_etudiant_26')), (4, ref('demo_etudiant_27')), (4, ref('demo_etudiant_28')), (4, ref('demo_etudiant_29')), (4, ref('demo_etudiant_30')), (4, ref('demo_etudiant_31')), (4, ref('demo_etudiant_32')), (4, ref('demo_etudiant_33')), (4, ref('demo_etudiant_34')), (4, ref('demo_etudiant_35'))]"/>
+        </record>
+
+        <record id="demo_cours_4" model="ecole.cours">
+            <field name="name">Littérature Française</field>
+            <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
+            <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
+            <field name="capacite">40</field>
+            <field name="etat">ouvert</field>
+            <field name="enseignant_id" ref="demo_enseignant_4"/>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2')), (4, ref('demo_etudiant_3')), (4, ref('demo_etudiant_4')), (4, ref('demo_etudiant_5')), (4, ref('demo_etudiant_6')), (4, ref('demo_etudiant_7')), (4, ref('demo_etudiant_8')), (4, ref('demo_etudiant_9')), (4, ref('demo_etudiant_10')), (4, ref('demo_etudiant_11')), (4, ref('demo_etudiant_12')), (4, ref('demo_etudiant_13')), (4, ref('demo_etudiant_14')), (4, ref('demo_etudiant_15')), (4, ref('demo_etudiant_16')), (4, ref('demo_etudiant_17')), (4, ref('demo_etudiant_18')), (4, ref('demo_etudiant_19')), (4, ref('demo_etudiant_20')), (4, ref('demo_etudiant_21')), (4, ref('demo_etudiant_22')), (4, ref('demo_etudiant_23')), (4, ref('demo_etudiant_24')), (4, ref('demo_etudiant_25')), (4, ref('demo_etudiant_26')), (4, ref('demo_etudiant_27')), (4, ref('demo_etudiant_28')), (4, ref('demo_etudiant_29')), (4, ref('demo_etudiant_30')), (4, ref('demo_etudiant_31')), (4, ref('demo_etudiant_32')), (4, ref('demo_etudiant_33')), (4, ref('demo_etudiant_34')), (4, ref('demo_etudiant_35'))]"/>
+        </record>
+
+        <record id="demo_cours_5" model="ecole.cours">
+            <field name="name">Physique Quantique</field>
+            <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
+            <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
+            <field name="capacite">40</field>
+            <field name="etat">ouvert</field>
+            <field name="enseignant_id" ref="demo_enseignant_5"/>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2')), (4, ref('demo_etudiant_3')), (4, ref('demo_etudiant_4')), (4, ref('demo_etudiant_5')), (4, ref('demo_etudiant_6')), (4, ref('demo_etudiant_7')), (4, ref('demo_etudiant_8')), (4, ref('demo_etudiant_9')), (4, ref('demo_etudiant_10')), (4, ref('demo_etudiant_11')), (4, ref('demo_etudiant_12')), (4, ref('demo_etudiant_13')), (4, ref('demo_etudiant_14')), (4, ref('demo_etudiant_15')), (4, ref('demo_etudiant_16')), (4, ref('demo_etudiant_17')), (4, ref('demo_etudiant_18')), (4, ref('demo_etudiant_19')), (4, ref('demo_etudiant_20')), (4, ref('demo_etudiant_21')), (4, ref('demo_etudiant_22')), (4, ref('demo_etudiant_23')), (4, ref('demo_etudiant_24')), (4, ref('demo_etudiant_25')), (4, ref('demo_etudiant_26')), (4, ref('demo_etudiant_27')), (4, ref('demo_etudiant_28')), (4, ref('demo_etudiant_29')), (4, ref('demo_etudiant_30')), (4, ref('demo_etudiant_31')), (4, ref('demo_etudiant_32')), (4, ref('demo_etudiant_33')), (4, ref('demo_etudiant_34')), (4, ref('demo_etudiant_35'))]"/>
+        </record>
+
+        <record id="demo_note_1_1" model="ecole.note">
             <field name="etudiant_id" ref="demo_etudiant_1"/>
-            <field name="cours_id" ref="demo_cours_math"/>
-            <field name="note">17.5</field>
-            <field name="commentaire">Excellent travail, continuez ainsi !</field>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">10.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
         </record>
 
-        <record id="demo_note_2" model="ecole.note">
-            <field name="etudiant_id" ref="demo_etudiant_2"/>
-            <field name="cours_id" ref="demo_cours_math"/>
-            <field name="note">14.0</field>
-            <field name="commentaire">Bonne compréhension des concepts.</field>
+        <record id="demo_note_1_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_1"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">12.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
         </record>
+
+        <record id="demo_note_1_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_1"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_1_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_1"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">9.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_1_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_1"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">14.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_2_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_2_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">10.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_2_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_2_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_2_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">17.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_3_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_3"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">13.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_3_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_3"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">17.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_3_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_3"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">10.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_3_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_3"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">18.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_3_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_3"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">13.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_4_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_4"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">14.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_4_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_4"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">11.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_4_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_4"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">14.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_4_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_4"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">17.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_4_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_4"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">12.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_5_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_5"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">15.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_5_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_5"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">15.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_5_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_5"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">18.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_5_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_5"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_5_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_5"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_6_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_6"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">14.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_6_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_6"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">11.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_6_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_6"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">9.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_6_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_6"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">13.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_6_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_6"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">13.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_7_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_7"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">13.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_7_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_7"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">17.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_7_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_7"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">17.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_7_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_7"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">15.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_7_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_7"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">19.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_8_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_8"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">15.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_8_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_8"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">9.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_8_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_8"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">10.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_8_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_8"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">15.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_8_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_8"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">15.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_9_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_9"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">13.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_9_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_9"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">15.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_9_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_9"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_9_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_9"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">10.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_9_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_9"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">12.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_10_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_10"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">9.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_10_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_10"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_10_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_10"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_10_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_10"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">16.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_10_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_10"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_11_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_11"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">12.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_11_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_11"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">9.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_11_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_11"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">8.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_11_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_11"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">17.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_11_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_11"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">10.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_12_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_12"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_12_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_12"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">18.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_12_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_12"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">12.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_12_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_12"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">15.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_12_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_12"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">10.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_13_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_13"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">18.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_13_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_13"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_13_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_13"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">10.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_13_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_13"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">10.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_13_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_13"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_14_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_14"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">18.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_14_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_14"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">18.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_14_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_14"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_14_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_14"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">17.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_14_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_14"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">17.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_15_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_15"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_15_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_15"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">17.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_15_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_15"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_15_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_15"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">16.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_15_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_15"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">11.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_16_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_16"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_16_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_16"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_16_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_16"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">18.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_16_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_16"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_16_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_16"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_17_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_17"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">9.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_17_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_17"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_17_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_17"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">8.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_17_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_17"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">12.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_17_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_17"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">9.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_18_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_18"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">10.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_18_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_18"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">9.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_18_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_18"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">8.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_18_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_18"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">9.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_18_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_18"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">12.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_19_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_19"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">12.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_19_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_19"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">10.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_19_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_19"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">14.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_19_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_19"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">18.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_19_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_19"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">10.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_20_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_20"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">11.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_20_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_20"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_20_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_20"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_20_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_20"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">12.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_20_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_20"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_21_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_21"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_21_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_21"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">15.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_21_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_21"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">10.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_21_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_21"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_21_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_21"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">10.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_22_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_22"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_22_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_22"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">17.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_22_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_22"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">8.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_22_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_22"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">12.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_22_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_22"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">17.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_23_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_23"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">16.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_23_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_23"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_23_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_23"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">13.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_23_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_23"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">13.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_23_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_23"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">18.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_24_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_24"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">11.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_24_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_24"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">16.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_24_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_24"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_24_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_24"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">18.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_24_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_24"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">8.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_25_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_25"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_25_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_25"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">9.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_25_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_25"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">11.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_25_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_25"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">11.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_25_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_25"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">9.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_26_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_26"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">18.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_26_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_26"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_26_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_26"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_26_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_26"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_26_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_26"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">8.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_27_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_27"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">10.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_27_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_27"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">15.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_27_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_27"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_27_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_27"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">16.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_27_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_27"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">17.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_28_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_28"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">15.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_28_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_28"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_28_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_28"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_28_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_28"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">18.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_28_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_28"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">16.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_29_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_29"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">10.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_29_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_29"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_29_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_29"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">16.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_29_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_29"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">12.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_29_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_29"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">18.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_30_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_30"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_30_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_30"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_30_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_30"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">18.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_30_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_30"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">8.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_30_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_30"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">10.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_31_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_31"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">14.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_31_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_31"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">8.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_31_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_31"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">8.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_31_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_31"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">15.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_31_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_31"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">15.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_32_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_32"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">10.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_32_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_32"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_32_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_32"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">13.8</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_32_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_32"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">17.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_32_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_32"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">13.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_33_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_33"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">16.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_33_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_33"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">9.3</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_33_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_33"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">9.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_33_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_33"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">17.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_33_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_33"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">9.7</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_34_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_34"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">17.0</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_34_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_34"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">14.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_34_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_34"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">15.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_34_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_34"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">9.9</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_34_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_34"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">11.6</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_35_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_35"/>
+            <field name="cours_id" ref="demo_cours_1"/>
+            <field name="note">13.1</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_35_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_35"/>
+            <field name="cours_id" ref="demo_cours_2"/>
+            <field name="note">10.5</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_35_3" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_35"/>
+            <field name="cours_id" ref="demo_cours_3"/>
+            <field name="note">10.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_35_4" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_35"/>
+            <field name="cours_id" ref="demo_cours_4"/>
+            <field name="note">15.2</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
+        <record id="demo_note_35_5" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_35"/>
+            <field name="cours_id" ref="demo_cours_5"/>
+            <field name="note">14.4</field>
+            <field name="date" eval="time.strftime('%Y-11-15')"/>
+        </record>
+
     </data>
 </odoo>
