@@ -11,7 +11,7 @@ class Note(models.Model):
         'ecole.etudiant',
         string='Étudiant',
         required=True,
-        ondelete='cascade'   # supprime la note si l'étudiant est supprimé
+        ondelete='cascade'
     )
     cours_id = fields.Many2one(
         'ecole.cours',
@@ -32,7 +32,6 @@ class Note(models.Model):
     commentaire = fields.Text(string='Commentaire')
     date        = fields.Date(string='Date', default=fields.Date.today)
 
-    # Champ calculé — appréciation automatique selon la note
     @api.depends('note')
     def _compute_appreciation(self):
         for rec in self:
@@ -45,9 +44,18 @@ class Note(models.Model):
             else:
                 rec.appreciation = 'insuffisant'
 
-    # Contrainte — note entre 0 et 20
     @api.constrains('note')
     def _check_note(self):
         for rec in self:
             if rec.note < 0 or rec.note > 20:
                 raise ValidationError("La note doit être entre 0 et 20 !")
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super(Note, self).create(vals_list)
+        template = self.env.ref('ecole.email_template_note_result', raise_if_not_found=False)
+        if template:
+            for rec in records:
+                if rec.etudiant_id.email:
+                    template.send_mail(rec.id, force_send=False)
+        return records
