@@ -106,11 +106,23 @@
         </field>
     </record>
 
+    <!-- Vue Graph -->
+    <record id="view_cours_graph" model="ir.ui.view">
+        <field name="name">ecole.cours.graph</field>
+        <field name="model">ecole.cours</field>
+        <field name="arch" type="xml">
+            <graph string="Remplissage des Cours" type="bar">
+                <field name="name"/>
+                <field name="nb_etudiants" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <!-- Action -->
     <record id="action_cours" model="ir.actions.act_window">
         <field name="name">Cours</field>
         <field name="res_model">ecole.cours</field>
-        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_mode">tree,kanban,form,graph</field>
     </record>
 
     <!-- Menu -->

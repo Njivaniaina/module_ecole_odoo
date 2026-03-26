@@ -42,11 +42,36 @@
         </field>
     </record>
 
+    <!-- Vue Pivot -->
+    <record id="view_note_pivot" model="ir.ui.view">
+        <field name="name">ecole.note.pivot</field>
+        <field name="model">ecole.note</field>
+        <field name="arch" type="xml">
+            <pivot string="Analyse des Notes" display_quantity="1">
+                <field name="cours_id" type="row"/>
+                <field name="etudiant_id" type="row"/>
+                <field name="note" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Vue Graph -->
+    <record id="view_note_graph" model="ir.ui.view">
+        <field name="name">ecole.note.graph</field>
+        <field name="model">ecole.note</field>
+        <field name="arch" type="xml">
+            <graph string="Analyse des Notes" type="bar">
+                <field name="cours_id"/>
+                <field name="note" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <!-- Action -->
     <record id="action_note" model="ir.actions.act_window">
         <field name="name">Notes</field>
         <field name="res_model">ecole.note</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
     </record>
 
     <!-- Menu -->
