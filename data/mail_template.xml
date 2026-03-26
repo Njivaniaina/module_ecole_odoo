@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_note_result" model="mail.template">
+            <field name="name">École : Avis de Note</field>
+            <field name="model_id" ref="model_ecole_note"/>
+            <field name="subject">Résultat de votre évaluation : {{ object.cours_id.name }}</field>
+            <field name="email_from">{{ (object.create_uid.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.etudiant_id.name }}</field>
+            <field name="email_to">{{ object.etudiant_id.email }}</field>
+            <field name="lang">{{ object.etudiant_id.lang or 'fr_FR' }}</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        Bonjour <t t-out="object.etudiant_id.name or ''">Étudiant</t>,<br/><br/>
+        Votre note pour le cours <strong><t t-out="object.cours_id.name or ''">Cours</t></strong> a été enregistrée.
+        <br/><br/>
+        <strong>Détails :</strong>
+        <ul>
+            <li>Note : <t t-out="object.note or ''">10</t> / 20</li>
+            <li>Appréciation : <t t-out="object.appreciation_label or object.appreciation or ''">Bien</t></li>
+            <t t-if="object.commentaire">
+                <li>Commentaire : <t t-out="object.commentaire or ''">...</t></li>
+            </t>
+        </ul>
+        <br/>
+        Cordialement,<br/>
+        L'administration de l'école.
+    </p>
+</div>
+            </field>
+        </record>
+    </data>
+</odoo>

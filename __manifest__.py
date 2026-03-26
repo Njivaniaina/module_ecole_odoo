@@ -9,6 +9,7 @@
         'security/ecole_security.xml',
         'security/ir.model.access.csv',
         'data/sequences.xml', 
+        'data/mail_template.xml',
         'views/etudiant_views.xml',
         'views/cours_views.xml',
         'views/note_views.xml',
