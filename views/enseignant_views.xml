@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vue formulaire -->
+    <record id="view_enseignant_form" model="ir.ui.view">
+        <field name="name">ecole.enseignant.form</field>
+        <field name="model">ecole.enseignant</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Nom complet..."/></h1>
+                    </div>
+                    <group>
+                        <group string="Coordonnées">
+                            <field name="email"/>
+                            <field name="telephone"/>
+                            <field name="specialite"/>
+                        </group>
+                        <group string="Statistiques">
+                            <field name="nb_cours"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Cours dispensés">
+                            <field name="cours_ids">
+                                <tree>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="date_debut"/>
+                                    <field name="date_fin"/>
+                                    <field name="etat"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue liste -->
+    <record id="view_enseignant_list" model="ir.ui.view">
+        <field name="name">ecole.enseignant.list</field>
+        <field name="model">ecole.enseignant</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="specialite"/>
+                <field name="email"/>
+                <field name="telephone"/>
+                <field name="nb_cours"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_enseignant" model="ir.actions.act_window">
+        <field name="name">Enseignants</field>
+        <field name="res_model">ecole.enseignant</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_ecole_enseignant"
+              name="Enseignants"
+              parent="menu_ecole_root"
+              action="action_enseignant"
+              sequence="5"/>
+
+</odoo>

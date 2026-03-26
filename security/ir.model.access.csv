@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ecole_etudiant,ecole.etudiant,model_ecole_etudiant,,1,1,1,1
 access_ecole_cours,ecole.cours,model_ecole_cours,,1,1,1,1
 access_ecole_note,ecole.note,model_ecole_note,,1,1,1,1
+access_ecole_enseignant,ecole.enseignant,model_ecole_enseignant,,1,1,1,1

@@ -16,6 +16,19 @@
             <field name="date_naissance">2001-10-20</field>
         </record>
 
+        <!-- Enseignants -->
+        <record id="demo_enseignant_1" model="ecole.enseignant">
+            <field name="name">Prof. Marie Curie</field>
+            <field name="email">marie.curie@ecole.com</field>
+            <field name="specialite">sciences</field>
+        </record>
+
+        <record id="demo_enseignant_2" model="ecole.enseignant">
+            <field name="name">M. Alan Turing</field>
+            <field name="email">alan.turing@ecole.com</field>
+            <field name="specialite">informatique</field>
+        </record>
+
         <!-- Cours -->
         <record id="demo_cours_math" model="ecole.cours">
             <field name="name">Mathématiques Avancées</field>
@@ -23,6 +36,7 @@
             <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
             <field name="capacite">25</field>
             <field name="etat">ouvert</field>
+            <field name="enseignant_id" ref="demo_enseignant_1"/>
             <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2'))]"/>
         </record>
 
@@ -32,6 +46,7 @@
             <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
             <field name="capacite">20</field>
             <field name="etat">ouvert</field>
+            <field name="enseignant_id" ref="demo_enseignant_2"/>
             <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1'))]"/>
         </record>
 

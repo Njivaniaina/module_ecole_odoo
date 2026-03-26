@@ -21,6 +21,13 @@ class Cours(models.Model):
         ('cloture', 'Clôturé'),
     ], string='État', default='brouillon', tracking=True)
 
+    # Relation avec l'enseignant (Many2one)
+    enseignant_id = fields.Many2one(
+        'ecole.enseignant',
+        string='Enseignant',
+        tracking=True
+    )
+
     # Relation avec les étudiants (Many2many)
     etudiant_ids = fields.Many2many(
         'ecole.etudiant',

@@ -31,6 +31,7 @@
                             <field name="date_fin"/>
                             <field name="capacite"/>
                             <field name="nb_etudiants"/>
+                            <field name="enseignant_id"/>
                         </group>
                     </group>
                     <notebook>
@@ -70,6 +71,7 @@
                 <field name="date_fin"/>
                 <field name="nb_etudiants"/>
                 <field name="capacite"/>
+                <field name="enseignant_id"/>
                 <field name="etat"/>
             </tree>
         </field>

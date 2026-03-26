@@ -11,6 +11,7 @@
         'views/etudiant_views.xml',
         'views/cours_views.xml',
         'views/note_views.xml',
+        'views/enseignant_views.xml',
         'data/demo_data.xml',
     ],
     'installable': True,
