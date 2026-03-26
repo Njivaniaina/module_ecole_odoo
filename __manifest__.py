@@ -10,6 +10,7 @@
         'security/ir.model.access.csv',
         'data/sequences.xml', 
         'data/mail_template.xml',
+        'views/portal_templates.xml',
         'views/etudiant_views.xml',
         'views/cours_views.xml',
         'views/note_views.xml',
