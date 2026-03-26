@@ -29,6 +29,18 @@
             <field name="model_id" ref="model_ecole_cours"/>
             <field name="groups" eval="[(4, ref('group_ecole_user'))]"/>
             <field name="domain_force">['|', ('enseignant_id.user_id', '=', user.id), ('enseignant_id', '=', False)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Règle pour le gestionnaire (voit tout) -->
+        <record id="rule_ecole_cours_manager" model="ir.rule">
+            <field name="name">Gestionnaire : voir tous les cours</field>
+            <field name="model_id" ref="model_ecole_cours"/>
+            <field name="groups" eval="[(4, ref('group_ecole_manager'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
         </record>
     </data>
 </odoo>
