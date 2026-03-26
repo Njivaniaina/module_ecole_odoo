@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Étudiants -->
+        <record id="demo_etudiant_1" model="ecole.etudiant">
+            <field name="name">Alice Martin</field>
+            <field name="email">alice.martin@example.com</field>
+            <field name="genre">feminin</field>
+            <field name="date_naissance">2002-05-15</field>
+        </record>
+
+        <record id="demo_etudiant_2" model="ecole.etudiant">
+            <field name="name">Jean Dupont</field>
+            <field name="email">j.dupont@example.com</field>
+            <field name="genre">masculin</field>
+            <field name="date_naissance">2001-10-20</field>
+        </record>
+
+        <!-- Cours -->
+        <record id="demo_cours_math" model="ecole.cours">
+            <field name="name">Mathématiques Avancées</field>
+            <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
+            <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
+            <field name="capacite">25</field>
+            <field name="etat">ouvert</field>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1')), (4, ref('demo_etudiant_2'))]"/>
+        </record>
+
+        <record id="demo_cours_info" model="ecole.cours">
+            <field name="name">Introduction à Python</field>
+            <field name="date_debut" eval="time.strftime('%Y-09-01')"/>
+            <field name="date_fin" eval="time.strftime('%Y-12-20')"/>
+            <field name="capacite">20</field>
+            <field name="etat">ouvert</field>
+            <field name="etudiant_ids" eval="[(4, ref('demo_etudiant_1'))]"/>
+        </record>
+
+        <!-- Notes -->
+        <record id="demo_note_1" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_1"/>
+            <field name="cours_id" ref="demo_cours_math"/>
+            <field name="note">17.5</field>
+            <field name="commentaire">Excellent travail, continuez ainsi !</field>
+        </record>
+
+        <record id="demo_note_2" model="ecole.note">
+            <field name="etudiant_id" ref="demo_etudiant_2"/>
+            <field name="cours_id" ref="demo_cours_math"/>
+            <field name="note">14.0</field>
+            <field name="commentaire">Bonne compréhension des concepts.</field>
+        </record>
+    </data>
+</odoo>

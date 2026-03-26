@@ -1,0 +1,17 @@
+# Odoo
+*.pyc
+*.pyo
+__pycache__/
+*.swp
+*.bak
+*~
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+.project
+.pydevproject
+
+# Git
+.git/

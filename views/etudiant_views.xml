@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vue formulaire -->
+    <record id="view_etudiant_form" model="ir.ui.view">
+        <field name="name">ecole.etudiant.form</field>
+        <field name="model">ecole.etudiant</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="actif" widget="boolean_button"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Nom complet..."/></h1>
+                        <h2><field name="matricule" readonly="1"/></h2>
+                    </div>
+                    <group>
+                        <group string="Informations personnelles">
+                            <field name="email"/>
+                            <field name="telephone"/>
+                            <field name="date_naissance"/>
+                            <field name="genre"/>
+                            <field name="moyenne"/>
+                            <field name="nb_cours"/>    
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Scolarité">
+                            <group string="Remarques générales">
+                                <field name="notes" nolabel="1" placeholder="Informations complémentaires sur l'étudiant..."/>
+                            </group>
+                        </page>
+                        <page string="Notes académiques">
+                            <field name="note_ids">
+                                <tree>
+                                    <field name="cours_id"/>
+                                    <field name="date"/>
+                                    <field name="note"/>
+                                    <field name="appreciation"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue liste -->
+    <record id="view_etudiant_list" model="ir.ui.view">
+        <field name="name">ecole.etudiant.list</field>
+        <field name="model">ecole.etudiant</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricule"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="telephone"/>
+                <field name="genre"/>
+                <field name="actif"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_etudiant" model="ir.actions.act_window">
+        <field name="name">Étudiants</field>
+        <field name="res_model">ecole.etudiant</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_ecole_root"
+              name="École"
+              sequence="10"/>
+
+    <menuitem id="menu_ecole_etudiant"
+              name="Étudiants"
+              parent="menu_ecole_root"
+              action="action_etudiant"
+              sequence="1"/>
+
+</odoo>

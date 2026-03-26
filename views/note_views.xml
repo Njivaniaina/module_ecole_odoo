@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vue form -->
+    <record id="view_note_form" model="ir.ui.view">
+        <field name="name">ecole.note.form</field>
+        <field name="model">ecole.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Informations">
+                            <field name="etudiant_id"/>
+                            <field name="cours_id"/>
+                            <field name="date"/>
+                        </group>
+                        <group string="Résultat">
+                            <field name="note"/>
+                            <field name="appreciation" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Commentaire">
+                        <field name="commentaire" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue tree -->
+    <record id="view_note_tree" model="ir.ui.view">
+        <field name="name">ecole.note.tree</field>
+        <field name="model">ecole.note</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="etudiant_id"/>
+                <field name="cours_id"/>
+                <field name="date"/>
+                <field name="note"/>
+                <field name="appreciation"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_note" model="ir.actions.act_window">
+        <field name="name">Notes</field>
+        <field name="res_model">ecole.note</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_ecole_note"
+              name="Notes"
+              parent="menu_ecole_root"
+              action="action_note"
+              sequence="3"/>
+
+</odoo>

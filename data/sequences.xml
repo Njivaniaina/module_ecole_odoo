@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_etudiant" model="ir.sequence">
+        <field name="name">Matricule Étudiant</field>
+        <field name="code">ecole.etudiant</field>
+        <field name="prefix">ETU/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+    <record id="seq_cours" model="ir.sequence">
+        <field name="name">Code Cours</field>
+        <field name="code">ecole.cours</field>
+        <field name="prefix">COURS/%(year)s/</field>
+        <field name="padding">3</field>
+    </record>
+</odoo>
