@@ -16,6 +16,12 @@ class Enseignant(models.Model):
         ('langues', 'Langues'),
     ], string='Spécialité')
 
+    user_id = fields.Many2one(
+        'res.users',
+        string='Utilisateur Odoo',
+        help='L\'utilisateur Odoo lié à cet enseignant pour la sécurité.'
+    )
+
     # Relation One2many : un enseignant a plusieurs cours
     cours_ids = fields.One2many(
         'ecole.cours',       # Modèle cible
