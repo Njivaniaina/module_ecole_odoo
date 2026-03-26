@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="email_template_note_result_v2" model="mail.template">
+        <record id="email_template_note_result_v3" model="mail.template">
             <field name="name">École : Avis de Note</field>
             <field name="model_id" ref="model_ecole_note"/>
             <field name="subject">Résultat de votre évaluation : {{ object.cours_id.name }}</field>
@@ -17,7 +17,7 @@
         <strong>Détails :</strong>
         <ul>
             <li>Note : <t t-out="object.note or ''">10</t> / 20</li>
-            <li>Appréciation : <t t-out="object.appreciation_label or object.appreciation or ''">Bien</t></li>
+            <li>Appréciation : <t t-out="object.appreciation or ''">Bien</t></li>
             <t t-if="object.commentaire">
                 <li>Commentaire : <t t-out="object.commentaire or ''">...</t></li>
             </t>

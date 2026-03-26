@@ -53,7 +53,7 @@ class Note(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         records = super(Note, self).create(vals_list)
-        template = self.env.ref('ecole.email_template_note_result_v2', raise_if_not_found=False)
+        template = self.env.ref('ecole.email_template_note_result_v3', raise_if_not_found=False)
         if template:
             for rec in records:
                 if rec.etudiant_id.email:
