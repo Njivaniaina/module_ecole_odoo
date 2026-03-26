@@ -32,3 +32,14 @@ class Enseignant(models.Model):
     def _compute_nb_cours(self):
         for rec in self:
             rec.nb_cours = len(rec.cours_ids)
+
+    def action_view_cours(self):
+        self.ensure_one()
+        return {
+            'name': 'Cours dispensés',
+            'type': 'ir.actions.act_window',
+            'res_model': 'ecole.cours',
+            'view_mode': 'tree,form',
+            'domain': [('enseignant_id', '=', self.id)],
+            'context': {'default_enseignant_id': self.id},
+        }

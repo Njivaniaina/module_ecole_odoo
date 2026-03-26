@@ -38,7 +38,12 @@ class Etudiant(models.Model):
     nb_cours = fields.Integer(
         string='Nombre de cours',
         compute='_compute_nb_cours',
-        store=True
+        count=True
+    )
+
+    nb_notes = fields.Integer(
+        string='Nombre de notes',
+        compute='_compute_nb_notes'
     )
 
     moyenne = fields.Float(
@@ -54,11 +59,37 @@ class Etudiant(models.Model):
         for etudiant in self:
             etudiant.nb_cours = len(etudiant.cours_ids)
 
+    @api.depends('note_ids')
+    def _compute_nb_notes(self):
+        for etudiant in self:
+            etudiant.nb_notes = len(etudiant.note_ids)
+
     @api.depends('note_ids.note')
     def _compute_moyenne(self):
         for etudiant in self:
             notes = etudiant.note_ids.mapped('note')
             etudiant.moyenne = sum(notes) / len(notes) if notes else 0.0
+
+    def action_view_notes(self):
+        self.ensure_one()
+        return {
+            'name': 'Notes de l\'étudiant',
+            'type': 'ir.actions.act_window',
+            'res_model': 'ecole.note',
+            'view_mode': 'tree,form',
+            'domain': [('etudiant_id', '=', self.id)],
+            'context': {'default_etudiant_id': self.id},
+        }
+
+    def action_view_cours(self):
+        self.ensure_one()
+        return {
+            'name': 'Cours de l\'étudiant',
+            'type': 'ir.actions.act_window',
+            'res_model': 'ecole.cours',
+            'view_mode': 'tree,form',
+            'domain': [('etudiant_ids', 'in', self.id)],
+        }
 
     # Génération automatique du matricule
     @api.model_create_multi
