@@ -1,5 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ecole_etudiant,ecole.etudiant,model_ecole_etudiant,,1,1,1,1
-access_ecole_cours,ecole.cours,model_ecole_cours,,1,1,1,1
-access_ecole_note,ecole.note,model_ecole_note,,1,1,1,1
-access_ecole_enseignant,ecole.enseignant,model_ecole_enseignant,,1,1,1,1
+access_ecole_etudiant_user,ecole.etudiant,model_ecole_etudiant,group_ecole_user,1,1,1,0
+access_ecole_etudiant_manager,ecole.etudiant,model_ecole_etudiant,group_ecole_manager,1,1,1,1
+access_ecole_cours_user,ecole.cours,model_ecole_cours,group_ecole_user,1,1,1,0
+access_ecole_cours_manager,ecole.cours,model_ecole_cours,group_ecole_manager,1,1,1,1
+access_ecole_note_user,ecole.note,model_ecole_note,group_ecole_user,1,1,1,0
+access_ecole_note_manager,ecole.note,model_ecole_note,group_ecole_manager,1,1,1,1
+access_ecole_enseignant_user,ecole.enseignant,model_ecole_enseignant,group_ecole_user,1,0,0,0
+access_ecole_enseignant_manager,ecole.enseignant,model_ecole_enseignant,group_ecole_manager,1,1,1,1

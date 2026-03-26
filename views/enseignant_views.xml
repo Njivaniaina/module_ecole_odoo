@@ -21,6 +21,7 @@
                             <field name="email"/>
                             <field name="telephone"/>
                             <field name="specialite"/>
+                            <field name="user_id"/>
                         </group>
                         <group string="Statistiques">
                             <field name="nb_cours"/>
